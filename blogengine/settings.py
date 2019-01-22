@@ -25,8 +25,10 @@ SECRET_KEY = 'zs#gl+-@25w04=xpgvcys22%024p5vw20(o6a!21d_q&zxw(l2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    'alexanderpugachev.pythonanywhere.com',
+]
+# "Это текст для проверки синхронизации"
 
 # Application definition
 
