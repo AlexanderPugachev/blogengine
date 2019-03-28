@@ -1,7 +1,7 @@
 {% extends 'blog/base_blog.html'%}
 
 {% block title %}
-  Alexander's Blog
+  My Blog
 {% endblock %}
 
 {% block content %}
@@ -10,6 +10,5 @@
   {% for post in page_object.object_list %}
     {% include 'blog/includes/post_card_template.html' %}
   {% endfor %}
-
 
 {% endblock %}
