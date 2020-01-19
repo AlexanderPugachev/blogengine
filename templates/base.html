@@ -19,8 +19,8 @@
 <body>
 
 <!-- Блок верхней бар-строки --> <!-- цвет ниже - зеленый крайола-->
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #1CAC78">
-    <a class="navbar-brand" href="{% url 'post_list_url' %}" style="color: black">My Blog</a>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #007bff">
+    <a class="navbar-brand" href="{% url 'post_list_url' %}" style="color: white">My Blog</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -28,10 +28,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item {% if 'post_list_url' %}active{% endif %}">
-          <a class="nav-link" href="{% url 'post_list_url' %}" style="color: black">Posts</a>
+          <a class="nav-link" href="{% url 'post_list_url' %}" style="color: white">Posts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'tags_list_url' %}" style="color: black">Tags</a>
+          <a class="nav-link" href="{% url 'tags_list_url' %}" style="color: white">Tags</a>
         </li>
 <!-- third button
         <li class="nav-item">
@@ -47,10 +47,10 @@
     </div>
   </nav>
 
-<!-- Блок карточек с постами -->
+<!-- Блок карточек с постами s-->
   <div class="container mt-5">
-    <div class="row">
-      <div class="col-6 offset-md-2">
+    <div class="row post-column">
+      <!-- <div class="col-6 offset-md-2"> -->
         {% block content %}
           There is no any content. Sorry
         {% endblock %}
@@ -87,6 +87,9 @@
       </div>
     </div>
   </div>
+  <footer class="footer">
+		<p>Alexander Pugachev 2020</p>
+	</footer>
 
 <!-- Блок пользовательской навигации -->
 {% if request.user.is_authenticated and request.user.is_staff %}

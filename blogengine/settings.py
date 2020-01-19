@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'alexanderpugachev.pythonanywhere.com',
     '127.0.0.1',
+    'localhost'
 ]
 # "Это текст для проверки синхронизации"
 

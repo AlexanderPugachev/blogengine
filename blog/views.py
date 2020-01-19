@@ -15,7 +15,7 @@ def posts_list(request):
         posts = Post.objects.filter(Q(title__icontains=search_query) | Q(body__icontains=search_query))
     else:
         posts = Post.objects.all()
-    amount = 4 # число выводимых постов на страницу
+    amount = 8 # число выводимых постов на страницу
     paginator = Paginator(posts, amount)
     page_number = request.GET.get('page', 1)
     page = paginator.get_page(page_number)
